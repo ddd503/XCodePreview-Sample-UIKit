@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 final class TopViewCell: UITableViewCell {
 
@@ -30,23 +29,28 @@ final class TopViewCell: UITableViewCell {
 }
 
 // MARK: UIViewをプレビューするために必要なコード
-// プレビューするViewをUIViewRepresentableでラップするためのstruct
-struct CellWrapper: UIViewRepresentable {
-    typealias UIViewType = TopViewCell
 
-    // プレビュー対象の初期化（インスタンス化）
-    func makeUIView(context: Context) -> TopViewCell {
-        TopViewCell.nib().instantiate(withOwner: self, options: nil).first as! TopViewCell
-    }
+import SwiftUI
 
-    // プレビュー対象の更新（更新結果がプレビューに反映される）
-    // LifeCycleは関係ない
-    func updateUIView(_ uiView: TopViewCell, context: Context) {
-        uiView.apply(title: "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト", backgroundColor: .red, thumbnailImage: UIImage(named: "1")!)
-    }
-}
-
+@available(iOS 13.0.0, *)
 struct TopViewCell_Previews: PreviewProvider {
+
+    // プレビューするViewをUIViewRepresentableでラップするためのstruct
+    struct CellWrapper: UIViewRepresentable {
+        typealias UIViewType = TopViewCell
+
+        // プレビュー対象の初期化（インスタンス化）
+        func makeUIView(context: Context) -> TopViewCell {
+            TopViewCell.nib().instantiate(withOwner: self, options: nil).first as! TopViewCell
+        }
+
+        // プレビュー対象の更新（更新結果がプレビューに反映される）
+        // LifeCycleは関係ない
+        func updateUIView(_ uiView: TopViewCell, context: Context) {
+            uiView.apply(title: "テストテストテスト", backgroundColor: .red, thumbnailImage: UIImage(named: "1")!)
+        }
+    }
+
     static var previews: some View {
         CellWrapper()
             .previewDisplayName("赤いセル")

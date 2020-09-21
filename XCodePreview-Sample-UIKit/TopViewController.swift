@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 final class TopViewController: UIViewController {
 
@@ -30,7 +29,7 @@ final class TopViewController: UIViewController {
         }
     }
 
-    init(titleText: String) {
+    init() {
         super.init(nibName: "TopViewController", bundle: nil)
     }
 
@@ -60,36 +59,40 @@ extension TopViewController: UITableViewDataSource {
 }
 
 // MARK: UIViewControllerをプレビューするために必要なコード
-// プレビューするViewControllerをUIViewControllerRepresentableでラップするためのstruct
-struct ViewControllerWrapper: UIViewControllerRepresentable {
-    typealias UIViewControllerType = TopViewController
 
-    // プレビュー対象の初期化
-    func makeUIViewController(context: Context) -> TopViewController {
-        TopViewController(titleText: "")
-    }
+import SwiftUI
 
-    // プレビュー対象の更新（更新結果がプレビューに反映される）
-    // LifeCycleは関係ない
-    func updateUIViewController(_ uiViewController: TopViewController, context: Context) {
-        let dataSource: [(title: String, color: UIColor, thumbnailImageName: String)] =
-            [("赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色赤色", .red, "1"),
-             ("青色青色青色青色青色青色青色青色", .blue, "2"),
-             ("緑色", .green, "3"),
-             ("黄色", .yellow, "4"),
-             ("茶色", .brown, "5"),
-             ("紫色", .purple, "6"),
-             ("水色", .cyan, "7"),
-             ("グレー", .gray, "8"),
-             ("ライトグレー", .lightGray, "9"),
-             ("オレンジ", .orange, "10")]
-        // 画面更新の呼び出し
-        uiViewController.apply(dataSource: dataSource)
-    }
-}
-
+@available(iOS 13.0.0, *)
 // 実際にプレビューを表示するPreviewProvider内で用意したUIViewControllerRepresentableを返す → プレビューが表示できる
 struct TopViewController_Previews: PreviewProvider {
+    // プレビューするViewControllerをUIViewControllerRepresentableでラップするためのstruct
+    struct ViewControllerWrapper: UIViewControllerRepresentable {
+        typealias UIViewControllerType = TopViewController
+
+        // プレビュー対象の初期化
+        func makeUIViewController(context: Context) -> TopViewController {
+            TopViewController()
+        }
+
+        // プレビュー対象の更新（更新結果がプレビューに反映される）
+        // LifeCycleは関係ない
+        func updateUIViewController(_ uiViewController: TopViewController, context: Context) {
+            let dataSource: [(title: String, color: UIColor, thumbnailImageName: String)] =
+                [("赤色赤色赤色赤色赤色赤色赤色", .red, "1"),
+                 ("青色青色青色", .blue, "2"),
+                 ("緑色", .green, "3"),
+                 ("黄色", .yellow, "4"),
+                 ("茶色", .brown, "5"),
+                 ("紫色", .purple, "6"),
+                 ("水色", .cyan, "7"),
+                 ("グレー", .gray, "8"),
+                 ("ライトグレー", .lightGray, "9"),
+                 ("オレンジ", .orange, "10")]
+            // 画面更新の呼び出し
+            uiViewController.apply(dataSource: dataSource)
+        }
+    }
+
     static var previews: some View {
         // 複数端末でのプレビューはGroupでまとめる必要がある
         Group {
