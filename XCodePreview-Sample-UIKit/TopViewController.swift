@@ -61,7 +61,7 @@ extension TopViewController: UITableViewDataSource {
 
 // MARK: UIViewControllerをプレビューするために必要なコード
 // プレビューするViewControllerをUIViewControllerRepresentableでラップするためのstruct
-struct Wrapper: UIViewControllerRepresentable {
+struct ViewControllerWrapper: UIViewControllerRepresentable {
     typealias UIViewControllerType = TopViewController
 
     // プレビュー対象の初期化
@@ -94,7 +94,7 @@ struct TopViewController_Previews: PreviewProvider {
         // 複数端末でのプレビューはGroupでまとめる必要がある
         Group {
             ForEach(["iPhone SE", "iPhone Xs Max"], id: \.self) { deviceName in
-                Wrapper()
+                ViewControllerWrapper()
                     .previewDevice(PreviewDevice(rawValue: deviceName))
                     .previewDisplayName(deviceName)
             }
