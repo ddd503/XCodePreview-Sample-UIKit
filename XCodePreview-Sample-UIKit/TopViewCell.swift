@@ -47,7 +47,7 @@ struct TopViewCell_Previews: PreviewProvider {
         // プレビュー対象の更新（更新結果がプレビューに反映される）
         // LifeCycleは関係ない
         func updateUIView(_ uiView: TopViewCell, context: Context) {
-            uiView.apply(title: "テストテストテスト", backgroundColor: .red, thumbnailImage: UIImage(named: "1")!)
+            uiView.apply(title: "レッド", backgroundColor: .red, thumbnailImage: UIImage(named: "1")!)
         }
     }
 

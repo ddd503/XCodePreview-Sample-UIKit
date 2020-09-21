@@ -10,13 +10,13 @@ import UIKit
 final class TopViewController: UIViewController {
 
     private var dataSource: [(title: String, color: UIColor, thumbnailImageName: String)] =
-        [("赤色", .red, "1"),
-         ("青色", .blue, "2"),
-         ("緑色", .green, "3"),
-         ("黄色", .yellow, "4"),
-         ("茶色", .brown, "5"),
-         ("紫色", .purple, "6"),
-         ("水色", .cyan, "7"),
+        [("レッド", .red, "1"),
+         ("ブルー", .blue, "2"),
+         ("グリーン", .green, "3"),
+         ("イエロー", .yellow, "4"),
+         ("ブラウン", .brown, "5"),
+         ("パープル", .purple, "6"),
+         ("ライトブルー", .cyan, "7"),
          ("グレー", .gray, "8"),
          ("ライトグレー", .lightGray, "9"),
          ("オレンジ", .orange, "10")]
@@ -78,13 +78,13 @@ struct TopViewController_Previews: PreviewProvider {
         // LifeCycleは関係ない
         func updateUIViewController(_ uiViewController: TopViewController, context: Context) {
             let dataSource: [(title: String, color: UIColor, thumbnailImageName: String)] =
-                [("赤色赤色赤色赤色赤色赤色赤色", .red, "1"),
-                 ("青色青色青色", .blue, "2"),
-                 ("緑色", .green, "3"),
-                 ("黄色", .yellow, "4"),
-                 ("茶色", .brown, "5"),
-                 ("紫色", .purple, "6"),
-                 ("水色", .cyan, "7"),
+                [("レッド", .red, "1"),
+                 ("ブルー", .blue, "2"),
+                 ("グリーン", .green, "3"),
+                 ("イエロー", .yellow, "4"),
+                 ("ブラウン", .brown, "5"),
+                 ("パープル", .purple, "6"),
+                 ("ライトブルー", .cyan, "7"),
                  ("グレー", .gray, "8"),
                  ("ライトグレー", .lightGray, "9"),
                  ("オレンジ", .orange, "10")]
