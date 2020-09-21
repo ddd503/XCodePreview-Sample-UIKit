@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopViewController" customModule="XCodePreview_Sample_UIKit" customModuleProvider="target">
             <connections>
-                <outlet property="titleLabel" destination="7lU-Ia-ikm" id="iaS-Nn-eRZ"/>
+                <outlet property="tableView" destination="5Dp-Gl-2D2" id="f8c-fG-vxV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,19 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lU-Ia-ikm">
-                    <rect key="frame" x="20" y="418" width="374" height="60"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Dp-Gl-2D2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="7lU-Ia-ikm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="DTq-LT-cPt"/>
-                <constraint firstItem="7lU-Ia-ikm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Xks-r1-dY5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7lU-Ia-ikm" secondAttribute="trailing" constant="20" id="ga4-FJ-kqd"/>
+                <constraint firstItem="5Dp-Gl-2D2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CJR-mn-REH"/>
+                <constraint firstItem="5Dp-Gl-2D2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nds-QC-tuo"/>
+                <constraint firstAttribute="bottom" secondItem="5Dp-Gl-2D2" secondAttribute="bottom" id="UWE-a9-D8O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Dp-Gl-2D2" secondAttribute="trailing" id="Vk6-hN-krf"/>
             </constraints>
             <point key="canvasLocation" x="107" y="104"/>
         </view>

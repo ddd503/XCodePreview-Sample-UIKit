@@ -13,6 +13,8 @@
 		4556B8642518420400CC96B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4556B8622518420400CC96B0 /* LaunchScreen.storyboard */; };
 		4556B86E2518447100CC96B0 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556B86C2518447100CC96B0 /* TopViewController.swift */; };
 		4556B86F2518447100CC96B0 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4556B86D2518447100CC96B0 /* TopViewController.xib */; };
+		4556B87B25188F3100CC96B0 /* TopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556B87925188F3100CC96B0 /* TopViewCell.swift */; };
+		4556B87C25188F3100CC96B0 /* TopViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4556B87A25188F3100CC96B0 /* TopViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4556B8652518420400CC96B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4556B86C2518447100CC96B0 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		4556B86D2518447100CC96B0 /* TopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
+		4556B87925188F3100CC96B0 /* TopViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewCell.swift; sourceTree = "<group>"; };
+		4556B87A25188F3100CC96B0 /* TopViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				4556B8652518420400CC96B0 /* Info.plist */,
 				4556B86C2518447100CC96B0 /* TopViewController.swift */,
 				4556B86D2518447100CC96B0 /* TopViewController.xib */,
+				4556B87925188F3100CC96B0 /* TopViewCell.swift */,
+				4556B87A25188F3100CC96B0 /* TopViewCell.xib */,
 			);
 			path = "XCodePreview-Sample-UIKit";
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			files = (
 				4556B86F2518447100CC96B0 /* TopViewController.xib in Resources */,
 				4556B8642518420400CC96B0 /* LaunchScreen.storyboard in Resources */,
+				4556B87C25188F3100CC96B0 /* TopViewCell.xib in Resources */,
 				4556B8612518420400CC96B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			files = (
 				4556B86E2518447100CC96B0 /* TopViewController.swift in Sources */,
 				4556B8582518420300CC96B0 /* AppDelegate.swift in Sources */,
+				4556B87B25188F3100CC96B0 /* TopViewCell.swift in Sources */,
 				4556B85A2518420300CC96B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
